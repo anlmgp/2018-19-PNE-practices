@@ -3,7 +3,7 @@ def fibonacci (n):
     b = 0
     for i in range(n):
         a,b = b, a + b
-    return b
+    return a
 
 n = int(input('Select the number of the sequence:'))
 print (fibonacci(n))

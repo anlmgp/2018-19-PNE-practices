@@ -13,7 +13,7 @@ IP = "212.128.253.64"
 
 s.connect((IP, PORT))
 
-s.send(str.encode(""))
+s.send(str.encode("Sara te amo"))
 
 msg = s.recv(2048).decode('utf-8')
 print("MESSAGE FROM THE SERVICE")

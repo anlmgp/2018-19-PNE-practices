@@ -1,0 +1,25 @@
+Here i will take my notes
+
+My phone IP address at URJC is : 10.3.53.19
+
+To obtain the IP address in the computer we put in the terminal: ifconfig and in the second paragraph (inet) we find it.
+My computer IP address at URJC is : 212.128.253.100
+
+Now we put ping 8.8.8.8, and then we stop it. We obtain the number of package exported an the time that is 69129sg
+* Ping time to 8.8.8.8
+time = 3.49 ms
+* Ping time to my computer: time= 0.042 ms (42 us) #Is the small time possible
+* Ping time to a computer in the same network:
+time=0.585 ms (600us)
+* Ping time to my mobile phone: time= 84.1 ms
+
+When we ping the page www.google.com we obtain the address (216.58.211.228), because we conect with DNS server we obtain it.
+* Ping to www.google.com:
+
+216.58.211.228
+
+
+* Ping to urjc.es
+212.128.240.50
+
+THIS IS A TEXT EXAMPLE FOR ADDING TO MY FILE

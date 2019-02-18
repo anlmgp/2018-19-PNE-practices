@@ -14,4 +14,4 @@ for i in Sequences:
     print('  Length: {}'.format(i.len()))
     for s in Bases:
         print('  Bases count: {}'.format(i.count(s)))
-        print('  Bases percentage: {}'.format(i.))
+        print('  Bases percentage: {}'.format(i.perc(s)))

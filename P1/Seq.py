@@ -32,7 +32,7 @@ class Seq:
         return (result2)
 
     def perc(self, base ):
-        cb = self.count(base)
+        cb = int(self.count(base))
         for i in base:
             result3 = (round(100.0 * cb[i] / len(self), 1))
             return (result3)

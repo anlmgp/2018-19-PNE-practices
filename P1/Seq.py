@@ -13,19 +13,26 @@ class Seq:
             if i in bases:
                 result1.append(bases[i])
         result1 = "".join(result1)
-        return (result1)
+        return Seq(result1)
 
     def reverse(self):
-        return self.strbases[::-1]
+        return Seq(self.strbases[::-1])
 
-    def count(self):
-        bases = ['A', 'C', 'T', 'G']
-        for i in bases:
-            result2 = self.strbases.count(i)
-            print(result2)
+    def count(self, base):
+        counter = []
+        result2 = []
+        for i in base:
+            r = self.count(i)
+            counter.append(r)
+        result = dict(zip(base, counter))
+        for key, value in result.items():
+            s = key + ':' + str(value)
+            result2.append(s)
+        result2 = ", ".join(result2)
+        return (result2)
 
-    def perc(self):
-        cb = self.count(s)
+    def perc(self, base ):
+        cb = self.count(base)
         for i in self:
             result3 = (round(100.0 * cb[i] / len(self), 1))
             return (result3)

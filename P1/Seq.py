@@ -33,6 +33,6 @@ class Seq:
 
     def perc(self, base ):
         cb = self.count(base)
-        for i in self:
+        for i in base:
             result3 = (round(100.0 * cb[i] / len(self), 1))
             return (result3)

@@ -22,7 +22,7 @@ class Seq:
         counter = []
         result2 = []
         for i in base:
-            r = self.count(i)
+            r = base.count(i)
             counter.append(r)
         result = dict(zip(base, counter))
         for key, value in result.items():

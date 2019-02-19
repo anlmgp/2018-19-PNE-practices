@@ -18,21 +18,12 @@ class Seq:
     def reverse(self):
         return Seq(self.strbases[::-1])
 
-    def count(self, base):
-        counter = []
-        result2 = []
-        for i in base:
-            r = base.count(i)
-            counter.append(r)
-        result = dict(zip(base, counter))
-        for key, value in result.items():
-            s = key + ':' + str(value)
-            result2.append(s)
-        result2 = ", ".join(result2)
-        return (result2)
+    def count1(self, base):
+        return self.strbases.count(base)
 
     def perc(self, base ):
-        cb = int(self.count(base))
-        for i in base:
-            result3 = (round(100.0 * cb[i] / len(self), 1))
-            return (result3)
+        if len(self.strbases) > 0:
+            cb = self.count1(base)
+            return round(100.0 * cb / len(self.strbases), 1)
+        else:
+            return 0

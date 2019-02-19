@@ -6,4 +6,4 @@ def fibonacci (n):
     return a
 
 n = int(input('Select the number of the sequence:'))
-print (fibonacci(n))
+print ('The number of the postion',n,'of the fibonnaci serie is',fibonacci(n))

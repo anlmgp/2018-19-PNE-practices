@@ -2,7 +2,7 @@ import socket
 from Seq import Seq
 
 # Configure the Server's IP and PORT
-PORT = 8888
+PORT = 8882
 IP = "212.128.253.109"
 MAX_OPEN_REQUESTS = 5
 
@@ -32,13 +32,11 @@ try:
         msg = clientsocket.recv(2048).decode("utf-8")
         msg = msg.upper()
         msg1 = Seq(msg).complement()
-        msg2 = Seq(msg).reverse()
         print("The complement of the sequence is: {}".format(msg1.strbases))
-        print("The reverse of the sequence is : {}".format(msg2.strbases))
+
 
         # Send the messag
-        message = "OKAY"
-        send_bytes = str.encode(message)
+        send_bytes = str.encode(msg1.strbases)
         # We must write bytes, not a string
         clientsocket.send(send_bytes)
         clientsocket.close()

@@ -1,7 +1,7 @@
 import socket
 
-IP = "212.128.253.95"
-PORT = 8884
+IP = "212.128.253.103"
+PORT = 8885
 
 while True:
 
@@ -9,6 +9,8 @@ while True:
     msg = input("> ")
     if len(msg) == 0:
         msg = " "
+    elif len (msg) != 0:
+       msg = msg.replace (" ", "\n")
 
 
     # Now we can create the socket and connect to the servewr

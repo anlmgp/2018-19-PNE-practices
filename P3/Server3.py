@@ -2,9 +2,9 @@ import socket
 from Seq_analyzer import Seq
 
 
-PORT = 8884
+PORT = 8885
 
-IP = "212.128.253.95"
+IP = "212.128.253.103"
 MAX_OPEN_REQUESTS = 5
 
 # Counting the number of connections
@@ -37,10 +37,13 @@ try:
         if msg1 == " ":
             message = "ALIVE"
             send_bytes = str.encode(message)
-            # We must write bytes, not a string
             clientsocket.send(send_bytes)
             clientsocket.close()
         else:
+            for i in range(msg1[1:]):
+                if i == len:
+                    print("Ana te quiero")
+
             send_bytes = str.encode(msg1)
             # We must write bytes, not a string
             clientsocket.send(send_bytes)

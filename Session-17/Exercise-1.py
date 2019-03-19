@@ -7,6 +7,7 @@ f = open("exercise1.json", 'r')
 # Read the data from the file
 # Now person is a dictionary with all the information
 person1 = json.load(f)
+
 print ("Total people in database:",(len(person1["Number of people"])))
 
 for  person in person1["Number of people"]:
